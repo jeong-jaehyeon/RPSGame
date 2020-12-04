@@ -4,34 +4,33 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity"
     android:orientation="vertical"
-    android:weightSum="100">
+    android:weightSum="100"
+    tools:context=".MainActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="80"
-        android:orientation="vertical"
-        >
+        android:orientation="vertical">
 
-    <ImageView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:src="@drawable/hand_animation"
-        android:scaleType="fitCenter"
-        android:id="@+id/hand_animation_image"
-        />
+        <!--가위바위보 애니메이션-->
+        <ImageView
+            android:id="@+id/hand_animation_image"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="fitCenter"
+            android:src="@drawable/hand_animation" />
 
-        <!--<ImageView-->
-            <!--android:layout_width="match_parent"-->
-            <!--android:layout_height="match_parent"-->
-            <!--android:src="@drawable/com_gawe"-->
-            <!--android:scaleType="fitCenter"-->
-            <!--android:id="@+id/hand_animation_view"-->
-            <!--/>-->
+        <!--컴퓨터가 선택한 가위바위보-->
+        <ImageView
+            android:id="@+id/computer_animation_image"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="fitCenter"
+            android:src="@drawable/ic_replay_blackgreen_24dp" />
 
-        </LinearLayout>
+    </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -43,44 +42,44 @@
         >
 
         <ImageButton
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="25"
-            android:src="@drawable/com_gawe"
-            android:scaleType="fitCenter"
-            android:backgroundTint="#9FCC92"
             android:id="@+id/gaweButton"
-            android:onClick="button_click"/>
-
-        <ImageButton
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="25"
-            android:src="@drawable/com_bawe"
-            android:scaleType="fitCenter"
             android:backgroundTint="#9FCC92"
+            android:onClick="button_click"
+            android:scaleType="fitCenter"
+            android:src="@drawable/com_gawe" />
+
+        <ImageButton
             android:id="@+id/baweButton"
-            android:onClick="button_click"/>
-
-        <ImageButton
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="25"
-            android:src="@drawable/com_bo"
-            android:scaleType="fitCenter"
             android:backgroundTint="#9FCC92"
+            android:onClick="button_click"
+            android:scaleType="fitCenter"
+            android:src="@drawable/com_bawe" />
+
+        <ImageButton
             android:id="@+id/boButton"
-            android:onClick="button_click"/>
-
-        <ImageButton
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="25"
-            android:src="@drawable/ic_replay_blackgreen_24dp"
-            android:scaleType="fitCenter"
             android:backgroundTint="#9FCC92"
+            android:onClick="button_click"
+            android:scaleType="fitCenter"
+            android:src="@drawable/com_bo" />
+
+        <ImageButton
             android:id="@+id/reButton"
-            android:onClick="button_click"/>
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="25"
+            android:backgroundTint="#9FCC92"
+            android:onClick="button_click"
+            android:scaleType="fitCenter"
+            android:src="@drawable/ic_replay_blackgreen_24dp" />
 
     </LinearLayout>
 
